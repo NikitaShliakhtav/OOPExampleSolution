@@ -2,13 +2,12 @@
 
 
 
-
-
 int main() {
+	// 1)
 	Plane plane;
 
 	cout << "Before: ";
-	plane.print();
+	cout << plane.toString() << endl;
 
 	plane.brand = "Boeing";
 	plane.model = "474-400";
@@ -19,15 +18,13 @@ int main() {
 	plane.speed = 1000;
 	plane.running = true;
 
-
-
 	cout << "After: ";
-	plane.print();
+	cout << plane.toString() << endl;
 
+
+	// 2)
 	Plane* ptrPlane = nullptr;
 	ptrPlane = new Plane;
-
-
 
 	ptrPlane->brand = "Boeing";
 	ptrPlane->model = "373-100";
@@ -38,7 +35,7 @@ int main() {
 	ptrPlane->speed = 1000;
 	ptrPlane->running = true;
 
-	ptrPlane->print();
+	cout << ptrPlane->toString() << endl;
 
 	return 0;
 }

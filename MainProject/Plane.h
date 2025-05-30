@@ -1,8 +1,8 @@
 #include "main.h"
 
 class Plane {
-
 public:
+
 	string brand;
 	string model;
 	double width;
@@ -12,14 +12,16 @@ public:
 	int count;
 	bool running;
 
-	string to_string() {
+	string toString() {
 		string s = "";
 		s += brand + " " + model;
 		s += "(width = " + to_string(width);
-		s += "height = " + to_string(height);
-		s += "lenght = " + to_string(lenght);
-		s += "speed = " + to_string(speed);
-		s += "count of passengers = " + to_string(count);
+		s += ", height = " + to_string(height);
+		s += ", length = " + to_string(length);
+		s += ", speed = " + to_string(speed);
+		s += ", count of passengers = " + to_string(count);
+		s += ", ";
 		s += (running ? "working" : "repairing");
+		return s;
 	}
 };
