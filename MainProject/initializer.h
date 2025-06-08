@@ -1,17 +1,19 @@
 #pragma once
 #include "Student.h"
 
-class Intialazer {
+// functional class
+class Initializer {
 public:
 	void init(Student* students, int size) {
 		const int NAME_SIZE = 10;
-		const string NAMES[]{ "Alex", "Danik", "Max", "Nikita", "Arseniy", "Arina", "Lina", "Anton", "Vera", "Ivan" };
 
+		const string NAMES[]{ "Alex", "Danik", "Max", "Nikita", "Arseniy",
+		"Arina", "Lina", "Anton", "Vera", "Ivan" };
 
 		const int ALFABET_SIZE = 26;
 		const string ALFABET = "QWERTYUIOPASDFGHJKLZXCVBNM";
 
-		int maxAge = 16;
+		int maxAge = 18;
 		int minAge = 13;
 
 		int maxMark = 10;
@@ -20,7 +22,8 @@ public:
 		int maxClass = 11;
 		int minClass = 7;
 
-		for (int i = 0; i < size; i++) {
+		for (int i = 0; i < size; i++)
+		{
 			Student temp;
 			temp.firstname = NAMES[rand() % NAME_SIZE];
 			temp.surname = ALFABET[rand() % ALFABET_SIZE];
@@ -33,7 +36,6 @@ public:
 			temp.gender = 'm';
 
 			students[i] = temp;
-
 		}
 	}
 };
